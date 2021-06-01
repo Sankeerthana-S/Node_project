@@ -6,3 +6,4 @@ Modules to be used -
     -- body-parser
     -- statman stopwatch
     -- node mailer
+    -- pg(postgres)

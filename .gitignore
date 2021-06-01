@@ -2,4 +2,4 @@
 # Files that are ignored to get pushed in github
 
 .env
-
+node_modules/
