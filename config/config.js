@@ -1,3 +1,4 @@
+
 const config = {
     app: {
         port: process.env.PORT
@@ -7,7 +8,5 @@ const config = {
         password: process.env.DB_PASSWORD,
         database: process.env.DB_DATABASE
     },
-   
 }
-
 module.exports = config;
