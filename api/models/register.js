@@ -1,20 +1,25 @@
+const { NotExtended } = require('http-errors');
+const knex = require('../../config/db');
 
-
-const register = (req,res,next)=>{
-    res.render('/register');
+const form = (req, res, next) => {
+    const {id: id, user_name: user_name, email: email, password: password} = req.body;
+    knex('users').insert(
+        {
+            id: id,
+            name: user_name,
+            email_id: email,
+            password: password
+        }
+    ).then(result=>{
+        console.log(`Successfully registereed for user: ${user_name}`);
+        return res.sendStatus(200).json({
+            message: 'Success'
+        }).catch((err)=>{
+            next(err);
+        })
+    })
+    console.log(`${id}, ${user_name}, ${email}, ${password}`);
 }
-
-// knex.schema.createTable('users', table=>{
-//     table.integer('id').primary()
-//     table.string('name').notNullable()
-//     table.string('email_id').unique().notNullable()
-//     table.string('password')
-// }).then(()=>
-//     {console.log('Table created successfully')}
-//     ).catch((err)=>
-//     {console.error(`Error reported ${err}`);}
-//     );
-
 module.exports ={
-    register: register
+    register: form
 }

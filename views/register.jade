@@ -4,17 +4,17 @@ html
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
-    form(name="registration-from", method="post").reg_form
+    form(action="/regForm/form", method="post").reg_form
       h3 Register User
       br
       .input 
-        input(name="id", type="text", placeholder="Employee ID")
+        input(type="text", name="id", placeholder="Employee ID")
         br
-        input(type="text", name="user_name" placeholder="Employee Name") 
+        input(type="text", name="user_name", placeholder="Employee Name") 
         br
         input(type="email", name="email", placeholder="Email ID") 
         br
-        input(type="password", name="password" placeholder="password") 
+        input(type="password", name="password", placeholder="password") 
         br
       .action 
         input(type="submit", value="Register")
