@@ -1,0 +1,18 @@
+
+/* Pack of all divs and forms */
+
+.navbar{
+    background-color: rgb(37, 36, 36);
+    width: 100%;
+}
+
+form{
+    text-align: center;
+    margin: auto;
+    width: 300px;
+    height: 350px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.418) 0px 3px 8px;
+  }
+  

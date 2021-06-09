@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/main.css')
+    link(rel='stylesheet', href='/stylesheets/layout.css')
+    link(rel='stylesheet', href='/stylesheets/modules.css')
+    link(rel='stylesheet', href='/stylesheets/text.css')
+  body
+    header
+        .navbar 
+            ul 
+                li 
+                    h3 San's Code
+                li 
+                    a(class={active: currentUrl === '/userReg'} href='/userReg') Sign Up
+                li
+                    a(class={active: currentUrl === '/login'} href='/login') Sign In
+                li 
+                    a(class={active: currentUrl === '/'} href='/') Home
+    
+    section
+        block content 
+
+    footer 
+        .footer 
+            p.footer_text @Sankeerthana_codes

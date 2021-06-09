@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/modules.css')
+    link(rel='stylesheet', href='/stylesheets/layout.css')
+    link(rel='stylesheet', href='/stylesheets/main.css')
+    link(rel='stylesheet', href='/stylesheets/text.css')
+  body
+    h1 Successfully registered user
+        = user_name 
+    .action 
+        a(class={active: currentUrl === '/'} href='/') 
+            input(type="submit", value="Back to home")

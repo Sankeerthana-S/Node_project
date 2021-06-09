@@ -12,11 +12,7 @@ const form = (req, res, next) => {
         }
     ).then(result=>{
         console.log(`Successfully registereed for user: ${user_name}`);
-        return res.sendStatus(200).json({
-            message: 'Success'
-        }).catch((err)=>{
-            next(err);
-        })
+        return res.render('success_page',{user_name: user_name});
     })
     console.log(`${id}, ${user_name}, ${email}, ${password}`);
 }

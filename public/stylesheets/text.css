@@ -1,0 +1,28 @@
+
+/* Pack of all text formatting tags and anchor tag  */
+
+h3{
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+h1{
+    padding: 20px 40px;
+}
+.sub-head{
+    color: rgb(22, 45, 80);
+    margin: 0;
+    padding-top:15px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  padding: 0 10px;
+}
+
+.footer_text{
+    padding: 20px;
+    font-size: small;
+    color:rgb(40, 60, 88);
+}

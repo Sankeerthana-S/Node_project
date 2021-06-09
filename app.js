@@ -31,17 +31,33 @@ app.set('view engine', 'jade');
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-// render register page
-
-app.get('/userReg', (req, res)=>{
-    res.render('register');
-    console.log("Sent registration page");
+// API for home page
+app.get('/', (req,res)=>{
+    res.render('home');
+    console.log("Sent --> Main page")
 });
 
 
+// API for registration page
+app.get('/userReg', (req, res)=>{
+    res.render('register');
+    console.log("Sent --> registration page");
+});
+
+// API for Login page
+app.get('/login', (req, res)=>{
+    res.render('login');
+    console.log('Sent --> Login Page');
+});
+
+// POST API for registration form
 app.use('/regForm', register);
 
 
+
+
+
+// In case of any error
 app.use((req, res, next) => {
     const error = new Error('Not Found');
     error.status = 404;
@@ -59,6 +75,13 @@ app.use((error, req, res, next) => {
 
 
 
+
+
+
+
+
+
+// Server listening
 
 const PORT = config.parsed.PORT || process.env.PORT;
 app.listen(PORT, ()=>{
